@@ -1,4 +1,8 @@
 Jets.application.routes.draw do
+  resources :posts do
+    # get :make
+  end
+  get "queue_job", to: "posts#queue_job"
   root "jets/public#show"
 
   # The jets/public#show controller can serve static utf8 content out of the public folder.
